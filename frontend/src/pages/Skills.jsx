@@ -578,11 +578,8 @@ export default function Skills() {
     { name: "Python", icon: <FaPython className="w-6 h-6 text-blue-400" />, percent: 100 },
     { name: "C", icon: <SiC className="w-6 h-6 text-green-400" />, percent: 100 },
     { name: "C++", icon: <SiCplusplus className="w-6 h-6 text-blue-600" />, percent: 100 },
-    { name: "Rust", icon: <FaRust className="w-6 h-6 text-orange-600" />, percent: 100 },
     { name: "JavaScript", icon: <FaJsSquare className="w-6 h-6 text-yellow-400" />, percent: 90 },
-    { name: "Go", icon: <SiGo className="w-6 h-6 text-cyan-400" />, percent: 60 },
-    { name: "Bash Scripting", icon: <FaTerminal className="w-6 h-6 text-cyan-400" />, percent: 100 },
-    { name: "Shell Scripting", icon: <SiGnubash className="w-10 h-6 text-cyan-400" />, percent: 100 },
+    
   ];
 
   return (
