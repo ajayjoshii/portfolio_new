@@ -8,7 +8,7 @@ const projects = [
     image:
       "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=1200",
     tech: ["ROS2", "Python", "OpenCV", "TensorFlow", "SLAM"],
-    demo: "/projects/cybersecurity-project",
+    demo: "/blogs/Cybersecurity-project",
     code: "#",
   },
   {
@@ -18,7 +18,7 @@ const projects = [
     image:
       "https://i.ytimg.com/vi/OL7TNx9RquE/maxresdefault.jpg",
     tech: ["IoT", "Raspberry Pi", "MQTT", "Cloud", "ML"],
-    demo: "/projects/iot-robotics-project",
+    demo: "/blogs/iot-robotics-project",
     code: "#",
   },
   {
