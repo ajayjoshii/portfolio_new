@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom"; // <-- Import Link
 
 const projects = [
   {
@@ -8,7 +9,7 @@ const projects = [
     image:
       "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=1200",
     tech: ["ROS2", "Python", "OpenCV", "TensorFlow", "SLAM"],
-    demo: "/blogs/Cybersecurity-project",
+    demo: "/projects/Cybersecurity-project",
     code: "#",
   },
   {
@@ -18,7 +19,7 @@ const projects = [
     image:
       "https://i.ytimg.com/vi/OL7TNx9RquE/maxresdefault.jpg",
     tech: ["IoT", "Raspberry Pi", "MQTT", "Cloud", "ML"],
-    demo: "/blogs/iot-robotics-project",
+    demo: "/projects/iot-robotics-project",
     code: "#",
   },
   {
@@ -98,9 +99,7 @@ const Projects = () => {
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">
-                  {project.title}
-                </h3>
+                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
 
                 <p className="text-gray-400 text-justify text-sm mb-4 leading-relaxed">
                   {project.description}
@@ -120,18 +119,37 @@ const Projects = () => {
 
                 {/* Buttons */}
                 <div className="flex gap-3">
-                  <a
-                    href={project.demo}
-                    className="flex-1 text-center text-sm px-4 py-2 rounded-lg bg-violet-600 hover:bg-violet-700 transition"
-                  >
-                    View Demo
-                  </a>
-                  <a
-                    href={project.code}
-                    className="flex-1 text-center text-sm px-4 py-2 rounded-lg border border-violet-500 text-violet-400 hover:bg-violet-500/10 transition"
-                  >
-                    Code
-                  </a>
+                  {project.demo !== "#" ? (
+                    <Link
+                      to={project.demo}
+                      className="flex-1 text-center text-sm px-4 py-2 rounded-lg bg-violet-600 hover:bg-violet-700 transition"
+                    >
+                      View Demo
+                    </Link>
+                  ) : (
+                    <button
+                      disabled
+                      className="flex-1 text-center text-sm px-4 py-2 rounded-lg bg-gray-700 cursor-not-allowed"
+                    >
+                      View Demo
+                    </button>
+                  )}
+
+                  {project.code !== "#" ? (
+                    <a
+                      href={project.code}
+                      className="flex-1 text-center text-sm px-4 py-2 rounded-lg border border-violet-500 text-violet-400 hover:bg-violet-500/10 transition"
+                    >
+                      Code
+                    </a>
+                  ) : (
+                    <button
+                      disabled
+                      className="flex-1 text-center text-sm px-4 py-2 rounded-lg border border-gray-700 text-gray-400 cursor-not-allowed"
+                    >
+                      Code
+                    </button>
+                  )}
                 </div>
               </div>
             </motion.div>
@@ -146,12 +164,12 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-center mt-14"
         >
-          <a
-            href="/projects"
+          <Link
+            to="/projects"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-violet-500 text-violet-400 hover:bg-violet-500/10 transition"
           >
             View More Projects →
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>
