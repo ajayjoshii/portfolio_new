@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 
 export default function Research() {
+
   const stats = [
     { number: "4", label: "Research Papers" },
     { number: "1", label: "Published" },
@@ -35,27 +36,34 @@ export default function Research() {
     },
   ];
 
+  // ✅ UPDATED PUBLICATIONS
   const publications = [
     {
       id: "01",
-      status: "Published",
-      title: "Malware Classification Using ML (Extra Tree and Logistic Regression)",
+      status: "Under Review",
+      title: "Smart Sensor Cane for Visually Impaired Using IoT",
       author: "Anish Parajuli",
-      tags: ["Machine Learning", "Malware Detection", "Extra Tree", "Logistic Regression"],
+      desc: "An assistive IoT-based smart cane designed to enhance mobility for visually impaired individuals using real-time obstacle detection, haptic feedback, and intelligent navigation support.",
+      tags: ["IoT", "Assistive Technology", "Smart Sensors", "Embedded Systems"],
+      pdf: "/pdfs/sensor.pdf",
     },
     {
       id: "02",
-      status: "Published",
-      title: "Multi-Layered Cyber Defense Using AI-Based Monitoring",
+      status: "Under Review",
+      title: "IoT-Based Wildlife Intrusion Detection System for Nepali Farms",
       author: "Anish Parajuli",
-      tags: ["Server Monitoring", "Penetration Testing", "ML Algorithms"],
+      desc: "A smart agricultural security system leveraging IoT sensors and real-time alerts to detect and prevent wildlife intrusion in rural farms, improving crop protection and farmer safety.",
+      tags: ["IoT", "Agriculture Tech", "Wildlife Detection", "Smart Farming"],
+      pdf: "/pdfs/wildlife.pdf",
     },
     {
       id: "03",
       status: "Under Review",
-      title: "Cognitive Threat Detection in Smart Healthcare Systems",
+      title: "Truly Autonomous Self-Healing IoT Ecosystems for Large-Scale Smart Infrastructure",
       author: "Anish Parajuli",
-      tags: ["Smart Healthcare", "IoT Security", "Healthcare Cybersecurity"],
+      desc: "A next-generation IoT architecture that enables self-healing, adaptive, and autonomous infrastructure systems capable of detecting failures and recovering without human intervention.",
+      tags: ["Autonomous Systems", "IoT", "Self-Healing Systems", "Smart Infrastructure"],
+      pdf: "/pdfs/healing.pdf",
     },
   ];
 
@@ -72,7 +80,7 @@ export default function Research() {
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1 , y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             className="bg-gray-900 border cursor-pointer border-green-500/20
                        rounded-xl p-6
@@ -97,12 +105,19 @@ export default function Research() {
               </span>
             </div>
 
+            {/* Title */}
             <h3 className="text-lg font-semibold text-white mb-3">
               {pub.title}
             </h3>
 
-            <p className="text-gray-400 text-sm mb-4">
+            {/* Author */}
+            <p className="text-gray-400 text-sm mb-3">
               {pub.author}
+            </p>
+
+            {/* Description */}
+            <p className="text-gray-400 text-sm mb-4">
+              {pub.desc}
             </p>
 
             {/* Tags */}
@@ -122,18 +137,32 @@ export default function Research() {
 
             {/* Buttons */}
             <div className="flex gap-4">
-              <button className="flex-1 bg-green-500 text-black 
-                                 py-2 rounded-lg font-semibold
-                                 hover:shadow-[0_0_20px_#00ff88]
-                                 transition-all duration-700">
+              
+              {/* ✅ VIEW / DOWNLOAD PDF */}
+              <a
+                href={pub.pdf}
+                download
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 text-center bg-green-500 text-black 
+                           py-2 rounded-lg font-semibold
+                           hover:shadow-[0_0_20px_#00ff88]
+                           transition-all duration-700"
+              >
                 View Details
-              </button>
-              <button className="flex-1 border border-green-500 
-                                 text-green-400 py-2 rounded-lg
-                                 hover:bg-green-500/10
-                                 transition-all duration-700">
+              </a>
+
+              {/* ✅ DIRECT DOWNLOAD BUTTON */}
+              <a
+                download
+                className="flex-1 text-center border border-green-500 
+                           text-green-400 py-2 rounded-lg
+                           hover:bg-green-500/10
+                           transition-all duration-700"
+              >
                 Cite
-              </button>
+              </a>
+
             </div>
           </motion.div>
         ))}
@@ -189,8 +218,6 @@ export default function Research() {
           </motion.div>
         ))}
       </div>
-
-      
 
     </div>
   );

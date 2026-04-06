@@ -19,7 +19,7 @@ export default function Navbar() {
           <img
             src="/logo.png"
             alt="Logo"
-            className="h-13 w-13 transition-transform duration-900 group-hover:scale-110 sm:h-12 sm:w-12 md:h-15 md:w-15
+            className="h-13 w-13 transition-transform duration-900 group-hover:scale-110 sm:h-12 sm:w-12 md:h-18 md:w-18
  "
           />
           <h1 className="text-xl text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-blue-700 font-bold [text-shadow:2px_1px_0_#ef4444,-2px_-1px_0_#3b82f6] sm:text-lg md:text-xl lg:text-2xl leading-tight text-center md:text-left whitespace-nowrap
@@ -34,7 +34,7 @@ export default function Navbar() {
           <NavItem to="/about" label="About" />
           <NavItem to="/skills" label="Skills" />
           <NavItem to="/projects" label="Projects" />
-          <NavItem to="/experience" label="Experience" />
+          {/* <NavItem to="/experience" label="Experience" /> */}
           <NavItem to="/research" label="Research" />
           <NavItem to="/contact" label="Contact" />
 

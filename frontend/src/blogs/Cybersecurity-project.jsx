@@ -2,41 +2,71 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Network Stress Testing Simulation (DDoS Research Project)",
-    desc: "Simulated distributed traffic flooding techniques in a virtual lab environment. Studied server resilience, traffic filtering, and mitigation techniques.",
-    img: "/images/cyber1.jfif",
+    title: "MAC Address Randomization Tool (Privacy Research)",
+    desc: "Developed a script to safely randomize MAC addresses in a controlled lab environment to study tracking prevention and device fingerprinting mitigation techniques.",
+    img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
   },
   {
-    title: "MAC & IP Rotation Script",
-    desc: "Built an automation script to change MAC and IP addresses periodically for privacy research and network testing.",
-    img: "/images/ip.png",
+    title: "Network Discovery & Port Scanner",
+    desc: "Built a custom network scanner to identify live hosts, open ports, and running services. Focused on network mapping and security auditing.",
+    img: "https://images.unsplash.com/photo-1526378722484-bd91ca387e72",
   },
   {
-    title: "Network Scanner",
-    desc: "Developed a custom tool to discover live hosts, open ports, and running services within a network.",
-    img: "/images/networkscan.jpg",
+    title: "ARP Spoofing Simulation & Detection",
+    desc: "Simulated ARP spoofing attacks in a virtual lab to understand Man-in-the-Middle risks, and implemented detection mechanisms using packet inspection.",
+    img: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87",
   },
   {
-    title: "Keylogger (Security Awareness Project)",
-    desc: "Developed a keylogging tool to understand input monitoring risks and defensive countermeasures.",
-    img: "/images/keylog.jfif",
+    title: "Phishing & Fake Email Detection System",
+    desc: "Created a system to detect phishing emails using pattern recognition and header analysis to improve user awareness and email security.",
+    img: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3",
+  },
+  {
+    title: "Secure Input Monitoring Awareness Tool",
+    desc: "Developed a controlled keylogging simulation strictly for demonstrating risks and teaching defensive countermeasures against input monitoring threats.",
+    img: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+  },
+  {
+    title: "Packet Sniffer & Traffic Analyzer",
+    desc: "Built a packet analysis tool to capture and inspect network traffic, helping identify anomalies and understand protocol behavior.",
+    img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b",
+  },
+  {
+    title: "DNS Spoofing Lab & Defense Study",
+    desc: "Conducted DNS spoofing simulations in a lab environment and researched mitigation techniques such as DNSSEC and secure configurations.",
+    img: "https://images.unsplash.com/photo-1504639725590-34d0984388bd",
+  },
+  {
+    title: "Secure File Interception Monitor",
+    desc: "Designed a tool to monitor file transfers and detect suspicious interception attempts within a network.",
+    img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c",
+  },
+  {
+    title: "Web Security Crawler",
+    desc: "Developed a crawler to analyze websites for common security issues like broken links, exposed endpoints, and misconfigurations.",
+    img: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
   },
   {
     title: "Vulnerability Scanner",
-    desc: "Created a basic vulnerability scanning tool to detect misconfigurations and weak services.",
-    img: "/images/vulscan.jfif",
+    desc: "Created a basic vulnerability scanner to detect weak services, outdated software, and misconfigurations in systems.",
+    img: "https://images.unsplash.com/photo-1555949963-aa79dcee981c",
+  },
+  {
+    title: "Network Stress Testing Simulation",
+    desc: "Simulated high-traffic scenarios in a controlled lab to evaluate system resilience and study mitigation strategies like rate limiting and filtering.",
+    img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
   },
   {
     title: "Malware Classification System",
-    desc: "Built a machine learning-based model to classify malware samples based on extracted features.",
-    img: "/images/malclass.jpg",
+    desc: "Built a machine learning model to classify malware samples based on behavioral and static features.",
+    img: "https://images.unsplash.com/photo-1510915228340-29c85a43dcfe",
   },
 ];
 
 export default function CybersecurityProjects() {
   return (
     <section className="bg-gray-950 text-white py-20 px-6">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto mt-10">
         <motion.h2
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
