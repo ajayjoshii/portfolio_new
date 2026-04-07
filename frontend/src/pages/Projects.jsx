@@ -205,14 +205,14 @@
 //                   ))}
 //                 </div>
 
-                
 
 
 
 
 
 
-                
+
+
 
 //                 <div className="flex gap-3">
 //                   {project.demo !== "#" ? (
@@ -278,6 +278,7 @@
 
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { motion } from 'framer-motion';
 
 import {
   Radar,
@@ -307,28 +308,28 @@ const tools = [
   { title: "DDoS Testing Tool", desc: "Educational distributed denial-of-service testing", tag: "SECURITY", route: "/projects/tools/ddos-testing", icon: Radar },
   { title: "WiFi Deauth Tool", desc: "Deauthentication attacks for security testing", tag: "SECURITY", route: "/projects/tools/wifi-deauth", icon: WifiOff },
   { title: "IP & MAC Changer", desc: "Spoofs IP and MAC addresses for anonymity", tag: "SECURITY", route: "/projects/tools/ip-mac-changer", icon: Globe },
-{ title: "ARP Spoofing Tool", desc: "Man-in-the-middle attack via ARP cache poisoning", tag: "SECURITY", route: "/projects/tools/arp-spoof", icon: Fingerprint },
-{ title: "HTTPS Bypass", desc: "Research on HTTPS bypass techniques", tag: "SECURITY", route: "/projects/tools/https-bypass", icon: ShieldAlert },
-{ title: "Backdoor & Vuln Scanner", desc: "Detects backdoors and vulnerabilities in systems", tag: "SECURITY", route: "/projects/tools/backdoor-vuln", icon: Bug },
-{ title: "Keylogger", desc: "Keystroke logger for security research", tag: "SECURITY", route: "/projects/tools/keylogger", icon: Keyboard },
-{ title: "Packet Sniffer", desc: "Captures and analyzes network packets", tag: "SECURITY", route: "/projects/tools/packet-sniffer", icon: Network },
-{ title: "DNS Spoofer", desc: "Redirects DNS queries to malicious servers", tag: "SECURITY", route: "/projects/tools/dns-spoofer", icon: RadioTower },
-{ title: "File Interceptor", desc: "Intercepts files during network transfers", tag: "SECURITY", route: "/projects/tools/file-interceptor", icon: FileSearch },
-{ title: "Code Injector", desc: "Injects code into network traffic", tag: "SECURITY", route: "/projects/tools/code-injector", icon: Code },
-{ title: "ARP Spoof Detector", desc: "Detects ARP spoofing attacks on networks", tag: "SECURITY", route: "/projects/tools/arp-detector", icon: ShieldCheck },
+  { title: "ARP Spoofing Tool", desc: "Man-in-the-middle attack via ARP cache poisoning", tag: "SECURITY", route: "/projects/tools/arp-spoof", icon: Fingerprint },
+  { title: "HTTPS Bypass", desc: "Research on HTTPS bypass techniques", tag: "SECURITY", route: "/projects/tools/https-bypass", icon: ShieldAlert },
+  { title: "Backdoor & Vuln Scanner", desc: "Detects backdoors and vulnerabilities in systems", tag: "SECURITY", route: "/projects/tools/backdoor-vuln", icon: Bug },
+  { title: "Keylogger", desc: "Keystroke logger for security research", tag: "SECURITY", route: "/projects/tools/keylogger", icon: Keyboard },
+  { title: "Packet Sniffer", desc: "Captures and analyzes network packets", tag: "SECURITY", route: "/projects/tools/packet-sniffer", icon: Network },
+  { title: "DNS Spoofer", desc: "Redirects DNS queries to malicious servers", tag: "SECURITY", route: "/projects/tools/dns-spoofer", icon: RadioTower },
+  { title: "File Interceptor", desc: "Intercepts files during network transfers", tag: "SECURITY", route: "/projects/tools/file-interceptor", icon: FileSearch },
+  { title: "Code Injector", desc: "Injects code into network traffic", tag: "SECURITY", route: "/projects/tools/code-injector", icon: Code },
+  { title: "ARP Spoof Detector", desc: "Detects ARP spoofing attacks on networks", tag: "SECURITY", route: "/projects/tools/arp-detector", icon: ShieldCheck },
 
-{ title: "Wildlife Intrusion Detection", desc: "IoT-based system for Nepali farms", tag: "IOT/ROBOTICS", route: "/projects/tools/wildlife-intrusion", icon: Activity },
-{ title: "Human Following Robot", desc: "Robot that follows humans autonomously", tag: "IOT/ROBOTICS", route: "/projects/tools/human-following-robot", icon: Bot },
-{ title: "Smart Stick for Blind", desc: "IoT-enabled cane for visually impaired", tag: "IOT/ROBOTICS", route: "/projects/tools/smart-stick", icon: Eye },
-{ title: "Smart Doorbell", desc: "IoT-connected smart doorbell system", tag: "IOT/ROBOTICS", route: "/projects/tools/smart-doorbell", icon: DoorOpen },
-{ title: "Security Robot", desc: "Autonomous security surveillance robot", tag: "IOT/ROBOTICS", route: "/projects/tools/security-robot", icon: Bot },
-{ title: "Face Tracking Drone", desc: "Drone with real-time face tracking", tag: "IOT/ROBOTICS", route: "/projects/tools/face-tracking-drone", icon: Cpu },
+  { title: "Wildlife Intrusion Detection", desc: "IoT-based system for Nepali farms", tag: "IOT/ROBOTICS", route: "/projects/tools/wildlife-intrusion", icon: Activity },
+  { title: "Human Following Robot", desc: "Robot that follows humans autonomously", tag: "IOT/ROBOTICS", route: "/projects/tools/human-following-robot", icon: Bot },
+  { title: "Smart Stick for Blind", desc: "IoT-enabled cane for visually impaired", tag: "IOT/ROBOTICS", route: "/projects/tools/smart-stick", icon: Eye },
+  { title: "Smart Doorbell", desc: "IoT-connected smart doorbell system", tag: "IOT/ROBOTICS", route: "/projects/tools/smart-doorbell", icon: DoorOpen },
+  { title: "Security Robot", desc: "Autonomous security surveillance robot", tag: "IOT/ROBOTICS", route: "/projects/tools/security-robot", icon: Bot },
+  { title: "Face Tracking Drone", desc: "Drone with real-time face tracking", tag: "IOT/ROBOTICS", route: "/projects/tools/face-tracking-drone", icon: Cpu },
 
-// MACHINE LEARNING TOOLS
-{ title: "Malware Classification", desc: "Classifies malware using ML techniques", tag: "MACHINE LEARNING", route: "/projects/tools/malware-classification", icon: Cpu },
-{ title: "Jarvis Chatbot", desc: "Intelligent chatbot assistant using NLP", tag: "MACHINE LEARNING", route: "/projects/tools/jarvis-chatbot", icon: Cpu },
-{ title: "Vehicle Detection System", desc: "Detects vehicles in real-time with CV", tag: "MACHINE LEARNING", route: "/projects/tools/vehicle-detection", icon: Cpu },
-{ title: "Human Emotion & Laziness Detection", desc: "Analyzes facial expressions to track emotions and inactivity", tag: "MACHINE LEARNING", route: "/projects/tools/emotion-laziness-detection", icon: Cpu },
+  // MACHINE LEARNING TOOLS
+  { title: "Malware Classification", desc: "Classifies malware using ML techniques", tag: "MACHINE LEARNING", route: "/projects/tools/malware-classification", icon: Cpu },
+  { title: "Jarvis Chatbot", desc: "Intelligent chatbot assistant using NLP", tag: "MACHINE LEARNING", route: "/projects/tools/jarvis-chatbot", icon: Cpu },
+  { title: "Vehicle Detection System", desc: "Detects vehicles in real-time with CV", tag: "MACHINE LEARNING", route: "/projects/tools/vehicle-detection", icon: Cpu },
+  { title: "Human Emotion & Laziness Detection", desc: "Analyzes facial expressions to track emotions and inactivity", tag: "MACHINE LEARNING", route: "/projects/tools/emotion-laziness-detection", icon: Cpu },
 
 ];
 
@@ -345,17 +346,30 @@ export default function Tools() {
   return (
     <div className="min-h-screen bg-[#070b14] text-white p-10">
 
+      <h2 className="font-bold text-2xl md:text-4xl text-center text-green-600 mt-18">
+        {"My Projects".split("").map((char, index) => (
+          <motion.span
+            key={index}
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.3 }}
+            className="inline-block"
+          >
+            {char === " " ? "\u00A0" : char}
+          </motion.span>
+        ))}
+      </h2>
+
       {/* Tabs */}
-      <div className="flex justify-center gap-4 mb-10 flex-wrap pb-1 mt-16">
+      <div className="flex justify-center gap-4 mb-10 flex-wrap pb-1 mt-7">
         {categories.map((cat, idx) => (
           <button
             key={idx}
             onClick={() => setActiveCategory(cat)}
-            className={`px-4 py-2 rounded-full font-medium transition ${
-              activeCategory === cat
+            className={`px-4 py-2 rounded-full font-medium transition ${activeCategory === cat
                 ? "bg-green-500 text-black shadow-lg"
                 : "bg-gray-800 text-gray-300 hover:bg-green-600/30"
-            }`}
+              }`}
           >
             {cat}
           </button>

@@ -22,74 +22,88 @@ export default function About() {
         viewport={{ once: true }}
         className="text-center mb-10"
       >
-        <h2 className="text-3xl font-bold text-blue-400">About Me</h2>
+        {/* <h2 className="text-3xl md:text-4xl mt-10 font-bold text-blue-400">About Me</h2> */}
+
+        <h2 className="font-bold text-2xl md:text-4xl text-green-600 mt-10">
+          {"About Me".split("").map((char, index) => (
+            <motion.span
+              key={index}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.3 }}
+              className="inline-block"
+            >
+              {char === " " ? "\u00A0" : char}
+            </motion.span>
+          ))}
+        </h2>
       </motion.div>
 
       {/* Content */}
       <div className="grid grid-cols-1 gap-14 items-center">
-         {/* ============================= */}
-          {/* ✅ STATS SECTION (NEW ADDED) */}
-          {/* ============================= */}
+        {/* ============================= */}
+        {/* ✅ STATS SECTION (NEW ADDED) */}
+        {/* ============================= */}
 
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6"
-          >
-            {/* Years Experience */}
-            <div className="bg-gradient-to-br from-emerald-900 to-emerald-800
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-6"
+        >
+          {/* Years Experience */}
+          <div className="bg-gradient-to-br from-emerald-900 to-emerald-800
               rounded-xl p-8 text-center
               shadow-[0_0_40px_rgba(16,185,129,0.25)]
               hover:scale-105 transition-all duration-500">
-              <h3 className="text-4xl font-bold text-emerald-400 mb-2">
-                <CountUp end={5} duration={3} />+
-              </h3>
-              <p className="text-zinc-300 text-sm tracking-wider">
-                YEARS EXPERIENCE
-              </p>
-            </div>
+            <h3 className="text-4xl font-bold text-emerald-400 mb-2">
+              <CountUp end={5} duration={3} />+
+            </h3>
+            <p className="text-zinc-300 text-sm tracking-wider">
+              YEARS EXPERIENCE
+            </p>
+          </div>
 
-            {/* Projects */}
-            <div className="bg-gradient-to-br from-emerald-900 to-emerald-800
+          {/* Projects */}
+          <div className="bg-gradient-to-br from-emerald-900 to-emerald-800
               rounded-xl p-8 text-center
               shadow-[0_0_40px_rgba(16,185,129,0.25)]
               hover:scale-105 transition-all duration-500">
-              <h3 className="text-4xl font-bold text-emerald-400 mb-2">
-                <CountUp end={50} duration={3} />+
-              </h3>
-              <p className="text-zinc-300 text-sm tracking-wider">
-                PROJECTS COMPLETED
-              </p>
-            </div>
+            <h3 className="text-4xl font-bold text-emerald-400 mb-2">
+              <CountUp end={50} duration={3} />+
+            </h3>
+            <p className="text-zinc-300 text-sm tracking-wider">
+              PROJECTS COMPLETED
+            </p>
+          </div>
 
-            {/* Security Audits */}
-            <div className="bg-gradient-to-br from-emerald-900 to-emerald-800
+          {/* Security Audits */}
+          <div className="bg-gradient-to-br from-emerald-900 to-emerald-800
               rounded-xl p-8 text-center
               shadow-[0_0_40px_rgba(16,185,129,0.25)]
               hover:scale-105 transition-all duration-500">
-              <h3 className="text-4xl font-bold text-emerald-400 mb-2">
-                <CountUp end={100} duration={3} />+
-              </h3>
-              <p className="text-zinc-300 text-sm tracking-wider">
-                SECURITY AUDITS
-              </p>
-            </div>
+            <h3 className="text-4xl font-bold text-emerald-400 mb-2">
+              <CountUp end={100} duration={3} />+
+            </h3>
+            <p className="text-zinc-300 text-sm tracking-wider">
+              SECURITY AUDITS
+            </p>
+          </div>
 
-            {/* CTF */}
-            <div className="bg-gradient-to-br from-emerald-900 to-emerald-800
+          {/* CTF */}
+          <div className="bg-gradient-to-br from-emerald-900 to-emerald-800
               rounded-xl p-8 text-center
               shadow-[0_0_40px_rgba(16,185,129,0.25)]
               hover:scale-105 transition-all duration-500">
-              <h3 className="text-4xl font-bold text-emerald-400 mb-2">
-                <CountUp end={25} duration={3} />+
-              </h3>
-              <p className="text-zinc-300 text-sm tracking-wider">
-                CTF COMPETITIONS
-              </p>
-            </div>
-          </motion.div>
+            <h3 className="text-4xl font-bold text-emerald-400 mb-2">
+              <CountUp end={25} duration={3} />+
+            </h3>
+            <p className="text-zinc-300 text-sm tracking-wider">
+              CTF COMPETITIONS
+            </p>
+          </div>
+        </motion.div>
         <motion.div
           initial={{ opacity: 0, x: 60 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -183,7 +197,7 @@ export default function About() {
             </motion.div>
           </div>
 
-         
+
 
         </motion.div>
       </div>

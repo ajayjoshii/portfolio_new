@@ -303,7 +303,7 @@ export default function Home() {
           transition={{ duration: 1 }}
           className="relative z-10 max-w-xl text-center md:text-left text-white"
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+          {/* <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
             <motion.span
               className="bg-gradient-to-r from-green-300 via-emerald-400 to-lime-300 bg-clip-text text-transparent inline-block"
               initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
@@ -325,7 +325,22 @@ export default function Home() {
             >
               Anish Parajuli
             </motion.span>
-          </h1>
+          </h1> */}
+
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+            {"Anish Parajuli".split("").map((char, index) => (
+              <motion.span
+                key={index}
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.3 }}
+                className="bg-gradient-to-r from-green-300 via-emerald-400 to-lime-300 bg-clip-text text-transparent inline-block"
+              >
+                {char === " " ? "\u00A0" : char}
+              </motion.span>
+            ))}
+          </h2>
 
           <div className="mt-3 sm:mt-4 h-10 overflow-hidden">
             <AnimatePresence mode="wait">

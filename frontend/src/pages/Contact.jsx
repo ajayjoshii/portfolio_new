@@ -175,14 +175,28 @@ export default function Contact() {
   return (
     <section className="min-h-screen bg-black flex items-center justify-center px-4">
       <div className="md:max-w-5xl w-full mt-24 mb-10">
-        <motion.h2
+        {/* <motion.h2
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center text-4xl font-bold text-green-400 mb-12"
         >
           Contact
           <span className="block w-16 h-1 bg-green-400 mx-auto mt-3" />
-        </motion.h2>
+        </motion.h2> */}
+
+        <h2 className="font-bold text-2xl md:text-4xl text-center text-green-600 mt-10 mb-10">
+          {"Contact Us".split("").map((char, index) => (
+            <motion.span
+              key={index}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.3 }}
+              className="inline-block"
+            >
+              {char === " " ? "\u00A0" : char}
+            </motion.span>
+          ))}
+        </h2>
 
         <div className="grid md:grid-cols-2 gap-10">
 

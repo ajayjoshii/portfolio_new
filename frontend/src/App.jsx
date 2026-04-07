@@ -38,7 +38,7 @@ export default function App() {
       <Navbar />
       <ScrollToTop />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/hi" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Projects />} />
@@ -77,7 +77,7 @@ export default function App() {
 
         <Route path="/experience" element={<Experience />} />
         <Route path="/research" element={<Research />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/" element={<Contact />} />
       </Routes>
 
       <Footer />

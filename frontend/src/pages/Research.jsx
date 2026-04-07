@@ -71,8 +71,23 @@ export default function Research() {
     <div className="bg-black text-white min-h-screen px-6 py-16">
 
       {/* ================= PUBLICATIONS ================= */}
-      <h2 className="text-3xl font-bold text-center text-green-400 mb-14 mt-10">
+      {/* <h2 className="text-3xl font-bold text-center text-green-400 mb-14 mt-10">
         Research Publications
+      </h2> */}
+
+
+      <h2 className="font-bold text-2xl md:text-4xl text-center text-green-600 mt-10 mb-10">
+        {"Research Publications".split("").map((char, index) => (
+          <motion.span
+            key={index}
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.3 }}
+            className="inline-block"
+          >
+            {char === " " ? "\u00A0" : char}
+          </motion.span>
+        ))}
       </h2>
 
       <div className="grid md:grid-cols-3 gap-8 mb-10">
@@ -95,11 +110,10 @@ export default function Research() {
               </span>
               <span
                 className={`px-3 py-1 text-xs rounded-full 
-                ${
-                  pub.status === "Published"
+                ${pub.status === "Published"
                     ? "bg-green-500/20 text-green-400"
                     : "bg-blue-500/20 text-blue-400"
-                }`}
+                  }`}
               >
                 {pub.status}
               </span>
@@ -137,7 +151,7 @@ export default function Research() {
 
             {/* Buttons */}
             <div className="flex gap-4">
-              
+
               {/* ✅ VIEW / DOWNLOAD PDF */}
               <a
                 href={pub.pdf}

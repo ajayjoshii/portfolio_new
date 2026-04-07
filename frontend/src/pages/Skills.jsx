@@ -462,14 +462,29 @@ export default function Skills() {
       <div className="max-w-7xl mx-auto mt-17">
 
         {/* Title */}
-        <motion.h2
+        {/* <motion.h2
           className="text-4xl md:text-5xl font-bold text-center mb-4"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
           My Skills
-        </motion.h2>
+        </motion.h2> */}
+
+
+         <h2 className="font-bold text-2xl md:text-4xl text-center mb-7 text-green-600 mt-10">
+          {"My Skills".split("").map((char, index) => (
+            <motion.span
+              key={index}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.3 }}
+              className="inline-block"
+            >
+              {char === " " ? "\u00A0" : char}
+            </motion.span>
+          ))}
+        </h2>
 
         <p className="text-center text-gray-400 mb-10">
           Technologies and tools I work with
