@@ -13,11 +13,10 @@ const _dirname = path.resolve();
 
 // Middleware
 app.use(express.json());
-const corsOptions = {
-  origin: "https://portfolio-new-100.onrender.com/",
-  credentials: true
-}
-app.use(cors(corsOptions));
+
+app.use(cors({
+  origin: "https://portfolio-new-100.onrender.com"
+}));
 
 
 // Routes
