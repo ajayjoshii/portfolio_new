@@ -1,4 +1,4 @@
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://backendnew-y8tg.onrender.com/api';
 
 export const sendContactMessage = async (formData) => {
   const response = await fetch(`${API_BASE_URL}/contact`, {

@@ -14,7 +14,7 @@ const _dirname = path.resolve();
 // Middleware
 app.use(express.json());
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: "https://portfolio-new-100.onrender.com/",
   credentials: true
 }
 app.use(cors(corsOptions));
