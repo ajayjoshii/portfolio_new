@@ -298,9 +298,14 @@ export default function Home() {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, x: -60 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
+          // initial={{ opacity: 0, x: -60 }}
+          // animate={{ opacity: 1, x: 0 }}
+          // transition={{ duration: 1 }}
+
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: index * 0.08 }}
+          animate={{ scale: [1, 1.02, 1] }}
           className="relative z-10 max-w-xl text-center md:text-left text-white"
         >
           {/* <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
@@ -379,11 +384,15 @@ export default function Home() {
         </motion.div>
 
         <motion.img
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: index * 0.08 }}
+          animate={{ scale: [1, 1.02, 1] }}
+
           src={home1}
           alt="Anish Parajuli"
           className="relative z-10 w-[180px] h-[180px] sm:w-[250px] sm:h-[250px] md:w-[350px] md:h-[370px] rounded-full object-cover border-4 border-green-400"
-          animate={{ scale: [1, 1.05, 1] }}
-          transition={{ duration: 3, repeat: Infinity }}
+        // transition={{ duration: 3, repeat: Infinity }}
         />
       </section>
 
