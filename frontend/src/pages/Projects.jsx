@@ -360,7 +360,7 @@ export default function Tools() {
         ))}
       </h2>
 
-     
+
 
       {/* Tabs */}
       <div className="flex justify-center gap-4 mb-10 flex-wrap pb-1 mt-7">
@@ -389,28 +389,34 @@ export default function Tools() {
           const Icon = tool.icon;
 
           return (
-            <motion.Link
-              initial={{ opacity: 0, x: -35 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: index * 0.05 }}
+            <Link
+
               key={index}
               to={tool.route}
               className="flex flex-col border border-green-400/30 rounded-xl p-5 bg-[#0b1120] hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] transition duration-300 h-full hover:scale-105"
             >
-              {/* Title + Icon */}
-              <div className="flex items-center gap-3 mb-2">
-                <Icon size={22} className="text-green-400" />
-                <h3 className="text-lg font-semibold">{tool.title}</h3>
-              </div>
 
-              <p className="text-gray-400 text-sm mb-4 flex-1">
-                {tool.desc}
-              </p>
+              <motion.div
+                initial={{ opacity: 0, x: -35 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, delay: index * 0.05 }}>
+                {/* Title + Icon */}
+                <div className="flex items-center gap-3 mb-2">
+                  <Icon size={22} className="text-green-400" />
+                  <h3 className="text-lg font-semibold">{tool.title}</h3>
+                </div>
 
-              <span className="text-xs bg-gray-800 px-2 py-1 rounded self-start">
-                {tool.tag}
-              </span>
-            </motion.Link>
+                <p className="text-gray-400 text-sm mb-4 flex-1">
+                  {tool.desc}
+                </p>
+
+                <span className="text-xs bg-gray-800 px-2 py-1 rounded self-start">
+                  {tool.tag}
+                </span>
+
+              </motion.div>
+
+            </Link>
           );
         })}
       </div>
