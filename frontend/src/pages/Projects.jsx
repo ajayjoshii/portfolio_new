@@ -360,6 +360,8 @@ export default function Tools() {
         ))}
       </h2>
 
+     
+
       {/* Tabs */}
       <div className="flex justify-center gap-4 mb-10 flex-wrap pb-1 mt-7">
         {categories.map((cat, idx) => (
@@ -367,8 +369,8 @@ export default function Tools() {
             key={idx}
             onClick={() => setActiveCategory(cat)}
             className={`px-4 py-2 rounded-full font-medium transition ${activeCategory === cat
-                ? "bg-green-500 text-black shadow-lg"
-                : "bg-gray-800 text-gray-300 hover:bg-green-600/30"
+              ? "bg-green-500 text-black shadow-lg"
+              : "bg-gray-800 text-gray-300 hover:bg-green-600/30"
               }`}
           >
             {cat}
@@ -387,7 +389,10 @@ export default function Tools() {
           const Icon = tool.icon;
 
           return (
-            <Link
+            <motion.Link
+              initial={{ opacity: 0, x: -35 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: index * 0.05 }}
               key={index}
               to={tool.route}
               className="flex flex-col border border-green-400/30 rounded-xl p-5 bg-[#0b1120] hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] transition duration-300 h-full hover:scale-105"
@@ -405,7 +410,7 @@ export default function Tools() {
               <span className="text-xs bg-gray-800 px-2 py-1 rounded self-start">
                 {tool.tag}
               </span>
-            </Link>
+            </motion.Link>
           );
         })}
       </div>

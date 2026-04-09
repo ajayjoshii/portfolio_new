@@ -200,7 +200,7 @@
 //     { name: "C", icon: <SiC className="w-6 h-6 text-green-400" />, percent: 100 },
 //     { name: "C++", icon: <SiCplusplus className="w-6 h-6 text-blue-600" />, percent: 100 },
 //     { name: "JavaScript", icon: <FaJsSquare className="w-6 h-6 text-yellow-400" />, percent: 90 },
-    
+
 //   ];
 
 //   return (
@@ -462,17 +462,17 @@ export default function Skills() {
       <div className="max-w-7xl mx-auto mt-17">
 
         {/* Title */}
-        {/* <motion.h2
-          className="text-4xl md:text-5xl font-bold text-center mb-4"
-          initial={{ opacity: 0, y: -20 }}
+        <motion.h2
+          className="text-4xl md:text-5xl font-bold text-center mb-4 text-green-500"
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 1, delay: 0.3 }}
         >
           My Skills
-        </motion.h2> */}
+        </motion.h2>
 
 
-         <h2 className="font-bold text-2xl md:text-4xl text-center mb-7 text-green-600 mt-10">
+        {/* <h2 className="font-bold text-2xl md:text-4xl text-center mb-7 text-green-600 mt-10">
           {"My Skills".split("").map((char, index) => (
             <motion.span
               key={index}
@@ -484,11 +484,15 @@ export default function Skills() {
               {char === " " ? "\u00A0" : char}
             </motion.span>
           ))}
-        </h2>
+        </h2> */}
 
-        <p className="text-center text-gray-400 mb-10">
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+          className="text-center text-gray-400 mb-10">
           Technologies and tools I work with
-        </p>
+        </motion.p>
 
         {/* Category Tabs */}
         <div className="flex justify-center gap-4 mb-10 flex-wrap">
@@ -496,11 +500,10 @@ export default function Skills() {
             <button
               key={idx}
               onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-2 rounded-full font-medium transition ${
-                activeCategory === cat
+              className={`px-4 py-2 rounded-full font-medium transition ${activeCategory === cat
                   ? "bg-green-500 text-black shadow-lg"
                   : "bg-gray-800 text-gray-300 hover:bg-green-600/30"
-              }`}
+                }`}
             >
               {cat}
             </button>
@@ -521,9 +524,9 @@ export default function Skills() {
               <motion.div
                 key={index}
                 className="flex flex-col border border-green-400/30 rounded-xl p-5 bg-[#0b1120] hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] transition duration-300 h-full hover:scale-105"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.05 }}
+                initial={{ opacity: 0, x: -35 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, delay: index * 0.05 }}
               >
                 {/* Title + Icon */}
                 <div className="flex items-center gap-3 mb-2">

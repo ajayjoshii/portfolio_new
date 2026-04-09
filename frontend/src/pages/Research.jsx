@@ -36,7 +36,6 @@ export default function Research() {
     },
   ];
 
-  // ✅ UPDATED PUBLICATIONS
   const publications = [
     {
       id: "01",
@@ -49,13 +48,15 @@ export default function Research() {
     },
     {
       id: "02",
-      status: "Under Review",
+      status: "Published",
       title: "IoT-Based Wildlife Intrusion Detection System for Nepali Farms",
       author: "Anish Parajuli",
       desc: "A smart agricultural security system leveraging IoT sensors and real-time alerts to detect and prevent wildlife intrusion in rural farms, improving crop protection and farmer safety.",
       tags: ["IoT", "Agriculture Tech", "Wildlife Detection", "Smart Farming"],
       pdf: "/pdfs/wildlife.pdf",
     },
+
+
     {
       id: "03",
       status: "Under Review",
@@ -64,6 +65,16 @@ export default function Research() {
       desc: "A next-generation IoT architecture that enables self-healing, adaptive, and autonomous infrastructure systems capable of detecting failures and recovering without human intervention.",
       tags: ["Autonomous Systems", "IoT", "Self-Healing Systems", "Smart Infrastructure"],
       pdf: "/pdfs/healing.pdf",
+    },
+    
+    {
+      id: "04",
+      status: "Under Review",
+      title: "Flying Umbrella UAV for Rain Protection",
+      author: "Anish Parajuli",
+      desc: "A Flying Umbrella UAV is an innovative drone designed to hover above users, providing hands-free rain protection while they walk. It combines autonomous flight, obstacle avoidance, and weather-resistant design for convenient personal shelter on the move.",
+      tags:["Autonomous Systems", "IoT", "Robotics", "Smart Mobility", "Wearable Technology"],
+      pdf: "/pdfs/Flying_Umbrella.pdf",
     },
   ];
 

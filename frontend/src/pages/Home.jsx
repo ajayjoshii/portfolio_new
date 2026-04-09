@@ -246,12 +246,12 @@ export default function Home() {
       <section className="relative min-h-screen overflow-hidden flex flex-col-reverse md:flex-row items-center justify-between px-6 sm:px-10 md:px-20 pt-28 sm:pt-20 lg:pt-28 gap-10 mb-0 bg-zinc-800">
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
           {[...Array(3)].map((_, i) => {
-            const radius = 20 + i * 200;
-            const speed = 30 + i * 10;
+            const radius = 20 + i * 100;
+            const speed = 100 + i * 10;
             return (
               <motion.div
                 key={`sphere-${i}`}
-                className="absolute border border-green-400/40 rounded-full"
+                className="absolute border border-green-400/40 left-100 md:ml-40 mt-20 rounded-full"
                 style={{
                   width: `${radius}px`,
                   height: `${radius}px`,
@@ -357,7 +357,7 @@ export default function Home() {
             </AnimatePresence>
           </div>
 
-          <p className="mt-4 text-zinc-200 text-justify font-semibold leading-relaxed text-sm sm:text-base md:text-lg">
+          <p className="mt-4 text-green-300 text-justify font-semibold leading-relaxed text-sm sm:text-base md:text-lg">
             I build intelligent, secure, and scalable solutions by combining software
             engineering, AI, cybersecurity, and hardware design—transforming complex ideas
             into efficient, innovative, and future-ready technologies.
