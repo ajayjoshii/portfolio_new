@@ -302,8 +302,8 @@ export default function Home() {
           // animate={{ opacity: 1, x: 0 }}
           // transition={{ duration: 1 }}
 
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -100, rotate: -45 }}
+          whileInView={{ opacity: 1, x: 0, rotate: 0 }}
           transition={{ duration: 1, delay: index * 0.08 }}
           animate={{ scale: [1, 1.02, 1] }}
           className="relative z-10 max-w-xl text-center md:text-left text-white"
@@ -338,6 +338,7 @@ export default function Home() {
               <motion.span
                 key={index}
                 initial={{ opacity: 0, y: -10 }}
+
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.3 }}
                 className="bg-gradient-to-r from-green-300 via-emerald-400 to-lime-300 bg-clip-text text-transparent inline-block"
@@ -362,13 +363,24 @@ export default function Home() {
             </AnimatePresence>
           </div>
 
-          <p className="mt-4 text-green-300 text-justify font-semibold leading-relaxed text-sm sm:text-base md:text-lg">
+          <motion.p
+            initial={{ opacity: 0, x: -10 }}
+
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.4, duration: 4, behavior: "smooth" }}
+
+            className="mt-4 text-green-300 text-justify font-semibold leading-relaxed text-sm sm:text-base md:text-lg">
             I build intelligent, secure, and scalable solutions by combining software
             engineering, AI, cybersecurity, and hardware design—transforming complex ideas
             into efficient, innovative, and future-ready technologies.
-          </p>
+          </motion.p>
 
-          <div className="mt-8 sm:mt-10 flex flex-row mb-10 gap-4 justify-center md:justify-start">
+          <motion.div
+            initial={{ opacity: 0, y: 80 }}
+            whileInView={{ opacity: 1, y:0 }}
+            transition={{ duration: 1, delay:0.3 }}
+            animate={{ scale: [1, 1.02, 1] }}
+            className="mt-8 sm:mt-10 flex flex-row mb-10 gap-4 justify-center md:justify-start">
             <a href="/cv.pdf" download>
               <button className="cursor-pointer group flex gap-2 items-center px-6 py-3 bg-[#5c5fe9] text-white rounded-2xl font-semibold hover:scale-105 hover:shadow-[0_0_20px_rgba(34,197,94,0.6)] transition">
                 Download CV
@@ -380,12 +392,12 @@ export default function Home() {
                 Contact Us
               </button>
             </Link>
-          </div>
+          </motion.div>
         </motion.div>
 
         <motion.img
-          initial={{ opacity: 0, x: 100 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: 100, rotate: 45 }}
+          whileInView={{ opacity: 1, x: 0, rotate: 0 }}
           transition={{ duration: 1, delay: index * 0.08 }}
           animate={{ scale: [1, 1.02, 1] }}
 
