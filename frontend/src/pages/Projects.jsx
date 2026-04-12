@@ -299,7 +299,11 @@ import {
   Cpu,
   Scan,
   RadioTower,
-  Fingerprint
+  Fingerprint,
+  NetworkIcon,
+  Shield,
+  Ghost,
+  BotIcon
 } from "lucide-react";
 
 
@@ -329,7 +333,46 @@ const tools = [
   { title: "Malware Classification", desc: "Classifies malware using ML techniques", tag: "MACHINE LEARNING", route: "/projects/tools/malware-classification", icon: Cpu },
   { title: "Jarvis Chatbot", desc: "Intelligent chatbot assistant using NLP", tag: "MACHINE LEARNING", route: "/projects/tools/jarvis-chatbot", icon: Cpu },
   { title: "Vehicle Detection System", desc: "Detects vehicles in real-time with CV", tag: "MACHINE LEARNING", route: "/projects/tools/vehicle-detection", icon: Cpu },
+
   { title: "Human Emotion & Laziness Detection", desc: "Analyzes facial expressions to track emotions and inactivity", tag: "MACHINE LEARNING", route: "/projects/tools/emotion-laziness-detection", icon: Cpu },
+
+
+
+  {
+    title: "Demon Killer",
+    desc: "AI-powered face tracking system that detects emotions and identifies user inactivity in real time",
+    tag: "HARDWARE",
+    route: "/projects/tools/emotion-laziness-detection",
+    icon: Cpu
+  },
+  {
+    title: "Net Slayer",
+    desc: "Advanced network monitoring tool for scanning devices, detecting threats, and analyzing traffic activity",
+    tag: "HARDWARE",
+    route: "/projects/tools/network-scanner",
+    icon: NetworkIcon
+  },
+  {
+    title: "Noob Slayer",
+    desc: "Beginner-friendly vulnerability scanner that identifies common security flaws in systems and applications",
+    tag: "HARDWARE",
+    route: "/projects/tools/vulnerability-scanner",
+    icon: Shield
+  },
+  {
+    title: "GHOST KEY",
+    desc: "Stealth keystroke monitoring system designed for controlled environments and security testing",
+    tag: "HARDWARE",
+    route: "/projects/tools/key-monitor",
+    icon: Ghost
+  },
+  {
+    title: "Charmy",
+    desc: "Smart AI assistant for automating tasks, generating insights, and improving productivity workflows",
+    tag: "HARDWARE",
+    route: "/projects/tools/ai-assistant",
+    icon: BotIcon
+  },
 
 ];
 
