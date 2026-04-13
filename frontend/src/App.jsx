@@ -32,6 +32,11 @@ import FaceTrackingDrone from './tools/FaceTrackingDrone'
 import SmartStick from './tools/SmartStick'
 import NetworkScanner from './tools/NetworkScanner'
 import WiFiTool from './tools/WifiTool'
+import GhostKey from './tools/GhostKey'
+import Charmy from './tools/Charmy'
+import NetSlayer from './tools/NetSlayer'
+import DemonKiller from './tools/DemonKiller'
+import NoobSlayer from './tools/NoobSlayer'
 export default function App() {
   return (
     <>
@@ -71,6 +76,13 @@ export default function App() {
         <Route path="/projects/tools/smart-doorbell" element={<SmartDoorbell />} />
         <Route path="/projects/tools/security-robot" element={<SecurityRobot />} />
         <Route path="/projects/tools/face-tracking-drone" element={<FaceTrackingDrone />} />
+
+        {/* hardware tools */}
+        <Route path="/projects/tools/ghost-key" element={<GhostKey />} />
+        <Route path="/projects/tools/charmy" element={<Charmy />} />
+        <Route path="/projects/tools/net-slayer" element={<NetSlayer />} />
+        <Route path="/projects/tools/demon-killer" element={<DemonKiller />} />
+        <Route path="/projects/tools/noob-slayer" element={<NoobSlayer />} />
 
        
 

@@ -464,7 +464,7 @@ export default function Skills() {
         {/* Title */}
         <motion.h2
           className="text-4xl md:text-5xl font-bold text-center mb-4 text-green-500"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
         >
@@ -514,7 +514,7 @@ export default function Skills() {
         <div
           className="grid gap-6 mb-16"
           style={{
-            gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
           }}
         >
           {filteredSkills.map((skill, index) => {

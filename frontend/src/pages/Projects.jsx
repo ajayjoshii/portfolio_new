@@ -279,7 +279,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from 'framer-motion';
-
 import {
   Radar,
   WifiOff,
@@ -342,39 +341,42 @@ const tools = [
     title: "Demon Killer",
     desc: "AI-powered face tracking system that detects emotions and identifies user inactivity in real time",
     tag: "HARDWARE",
-    route: "/projects/tools/emotion-laziness-detection",
+    route: "/projects/tools/demon-killer",
     icon: Cpu
   },
   {
     title: "Net Slayer",
     desc: "Advanced network monitoring tool for scanning devices, detecting threats, and analyzing traffic activity",
     tag: "HARDWARE",
-    route: "/projects/tools/network-scanner",
+    route: "/projects/tools/net-slayer",
     icon: NetworkIcon
   },
   {
     title: "Noob Slayer",
     desc: "Beginner-friendly vulnerability scanner that identifies common security flaws in systems and applications",
     tag: "HARDWARE",
-    route: "/projects/tools/vulnerability-scanner",
+    route: "/projects/tools/noob-slayer",
     icon: Shield
   },
   {
     title: "GHOST KEY",
     desc: "Stealth keystroke monitoring system designed for controlled environments and security testing",
     tag: "HARDWARE",
-    route: "/projects/tools/key-monitor",
+    route: "/projects/tools/ghost-key",
     icon: Ghost
   },
   {
     title: "Charmy",
     desc: "Smart AI assistant for automating tasks, generating insights, and improving productivity workflows",
     tag: "HARDWARE",
-    route: "/projects/tools/ai-assistant",
+    route: "/projects/tools/charmy",
     icon: BotIcon
   },
 
 ];
+
+const MotionLink = motion(Link);
+
 
 export default function Tools() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -389,24 +391,32 @@ export default function Tools() {
   return (
     <div className="min-h-screen bg-[#070b14] text-white p-10">
 
-      <h2 className="font-bold text-2xl md:text-4xl text-center text-green-600 mt-18">
+      <motion.h2
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.3 }}
+        className="font-bold text-2xl md:text-4xl text-center text-green-600 mt-18">
         {"My Projects".split("").map((char, index) => (
           <motion.span
             key={index}
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.3 }}
+            transition={{ delay: index * 0.5 }}
             className="inline-block"
           >
             {char === " " ? "\u00A0" : char}
           </motion.span>
         ))}
-      </h2>
+      </motion.h2>
 
 
 
       {/* Tabs */}
-      <div className="flex justify-center gap-4 mb-10 flex-wrap pb-1 mt-7">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.3 }}
+        className="flex justify-center gap-4 mb-10 flex-wrap pb-1 mt-7">
         {categories.map((cat, idx) => (
           <button
             key={idx}
@@ -419,30 +429,36 @@ export default function Tools() {
             {cat}
           </button>
         ))}
-      </div>
+      </motion.div>
 
       {/* Tools Grid */}
-      <div
+      <motion.div
+        // initial={{ opacity: 0, scale: 0.5}}
+        // whileInView={{ opacity: 1, scale: 1 }}
+        // transition={{ duration: 1, delay: 0.3 }}
+
         className="grid gap-6"
         style={{
-          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
         }}
       >
         {filteredTools.map((tool, index) => {
           const Icon = tool.icon;
 
           return (
-            <Link
+            <MotionLink
+              initial={{ opacity: 0, scale: 0.8}}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeInOut" }}
 
               key={index}
               to={tool.route}
               className="flex flex-col border border-green-400/30 rounded-xl p-5 bg-[#0b1120] hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] transition duration-300 h-full hover:scale-105"
             >
 
-              <motion.div
-                initial={{ opacity: 0, x: -35 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1, delay: index * 0.05 }}>
+              <div
+
+              >
                 {/* Title + Icon */}
                 <div className="flex items-center gap-3 mb-2">
                   <Icon size={22} className="text-green-400" />
@@ -457,12 +473,12 @@ export default function Tools() {
                   {tool.tag}
                 </span>
 
-              </motion.div>
+              </div>
 
-            </Link>
+            </MotionLink>
           );
         })}
-      </div>
+      </motion.div>
     </div>
   );
 }
