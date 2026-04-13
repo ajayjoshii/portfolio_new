@@ -36,7 +36,7 @@ export default function Footer() {
         {/* Social Media */}
         <div className="flex gap-4 mt-4 md:mt-0">
           <motion.a
-            href="https://github.com/ParajuliCoder"
+            href="https://github.com/AnishParajuli1"
             target="_blank"
             whileHover={{ scale: 1.3, rotate: 4, y: -3 }}
             className="text-zinc-400 hover:text-white transition-colors duration-300"

@@ -527,7 +527,7 @@ export default function Contact() {
   };
 
   const socials = [
-    { icon: "👨‍💻", link: "https://github.com/ParajuliCoder" },
+    { icon: "👨‍💻", link: "https://github.com/AnishParajuli1" },
     { icon: "💼", link: "https://www.linkedin.com/in/anish-parajuli-9a9333398" },
     { icon: "📸", link: "https://instagram.com/parajuli5343" },
     { icon: "✉️", link: "mailto:anishparajuli704@gmail.com" }
