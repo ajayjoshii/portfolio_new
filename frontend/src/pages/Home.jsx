@@ -389,16 +389,16 @@ export default function Home() {
           // animate={{ opacity: 1, x: 0 }}
           // transition={{ duration: 1 }}
 
-          initial={{ opacity: 0, x: -100, rotate: -45 }}
-          whileInView={{ opacity: 1, x: 0, rotate: 0 }}
+          initial={{ opacity: 0}}
+          whileInView={{ opacity: 1}}
           transition={{ duration: 1, delay: index * 0.08 }}
           animate={{ scale: [1, 1.02, 1] }}
           className="relative z-10 max-w-xl text-center md:text-left text-white"
         >
-          {/* <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
             <motion.span
               className="bg-gradient-to-r from-green-300 via-emerald-400 to-lime-300 bg-clip-text text-transparent inline-block"
-              initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
+              initial={{ opacity: 0, y: 40, filter: "blur(6px)" }}
               animate={{
                 opacity: 1,
                 y: 0,
@@ -417,23 +417,10 @@ export default function Home() {
             >
               Anish Parajuli
             </motion.span>
-          </h1> */}
+          </h1>
 
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-            {"Anish Parajuli".split("").map((char, index) => (
-              <motion.span
-                key={index}
-                initial={{ opacity: 0, y: -10 }}
-
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.3 }}
-                className="bg-gradient-to-r from-green-300 via-emerald-400 to-lime-300 bg-clip-text text-transparent inline-block"
-              >
-                {char === " " ? "\u00A0" : char}
-              </motion.span>
-            ))}
-          </h2>
+         
 
           <div className="mt-3 sm:mt-4 h-10 overflow-hidden">
             <AnimatePresence mode="wait">
@@ -483,12 +470,12 @@ export default function Home() {
         </motion.div>
 
         <motion.img
-          initial={{ opacity: 0, x: 100, rotate: 45 }}
-          whileInView={{ opacity: 1, x: 0, rotate: 0 }}
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: index * 0.08 }}
           animate={{ scale: [1, 1.02, 1] }}
 
-          src={home1}
+          // src={home1}
           alt="Anish Parajuli"
           className="relative z-10 w-[180px] h-[180px] sm:w-[250px] sm:h-[250px] md:w-[350px] md:h-[370px] rounded-full object-cover border-4 border-green-400"
         // transition={{ duration: 3, repeat: Infinity }}
