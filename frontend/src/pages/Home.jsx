@@ -295,57 +295,72 @@ export default function Home() {
               {Math.random() > 0.5 ? "1" : "0"}
             </motion.span>
           ))} */}
-          <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+          <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden bg-[#0a0f0a]">
 
-            {/* 🌐 CIRCUIT SPHERES (3D FLOATING GLOBES) */}
-            {[...Array(3)].map((_, i) => {
-              const size = 180 + i * 120; // big spheres
-              const delay = i * 1.2; // stagger motion
+            {/* 🌐 FLOATING NODES (replaces canvas points + lines concept) */}
+            {[...Array(25)].map((_, i) => {
+              const size = Math.random() * 6 + 3;
 
               return (
                 <motion.div
-                  key={`sphere-${i}`}
-                  className="absolute rounded-full border border-green-400/30"
+                  key={`node-${i}`}
+                  className="absolute rounded-full bg-gray-500/40"
                   style={{
-                    width: `${size}px`,
-                    height: `${size}px`,
-                    left: `${20 + i * 30}%`,
-                    top: `${30 + i * 10}%`,
-                    transform: "translate(-50%, -50%)",
-                    background:
-                      "radial-gradient(circle at 30% 30%, rgba(34,197,94,0.15), transparent 60%)",
-                    boxShadow: "0 0 60px rgba(34,197,94,0.15)",
+                    width: size,
+                    height: size,
+                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`,
+                    boxShadow: "0 0 12px rgba(34,197,94,0.4)",
                   }}
                   animate={{
-                    x: [0, 40, -40, 0],
-                    y: [0, -30, 30, 0],
-                    rotateX: [0, 360],
-                    rotateY: [0, 360],
-                    scale: [1, 1.05, 1],
+                    x: [0, Math.random() * 80 - 40, 0],
+                    y: [0, Math.random() * 80 - 40, 0],
+                    opacity: [0.2, 0.8, 0.2],
+                    scale: [1, 1.3, 1],
                   }}
                   transition={{
-                    duration: 12 + i * 2,
+                    duration: 6 + Math.random() * 6,
                     repeat: Infinity,
                     ease: "easeInOut",
-                    delay,
                   }}
-                >
-                  {/* circuit grid lines */}
-                  <div className="absolute inset-0 rounded-full opacity-30"
-                    style={{
-                      backgroundImage:
-                        "repeating-radial-gradient(circle, rgba(34,197,94,0.3) 1px, transparent 2px)",
-                    }}
-                  />
-                </motion.div>
+                />
               );
             })}
 
-            {/* ⚡ MATRIX RAIN (0/1 FALLING) */}
-            {[...Array(40)].map((_, i) => (
+            {/* 🔗 CONNECTION LINES (soft animated network feel like original canvas) */}
+            <svg className="absolute inset-0 w-full h-full">
+              {[...Array(15)].map((_, i) => {
+                const x1 = Math.random() * 100;
+                const y1 = Math.random() * 100;
+                const x2 = Math.random() * 100;
+                const y2 = Math.random() * 100;
+
+                return (
+                  <motion.line
+                    key={`line-${i}`}
+                    x1={`${x1}%`}
+                    y1={`${y1}%`}
+                    x2={`${x2}%`}
+                    y2={`${y2}%`}
+                    stroke="rgba(34,197,94,0.25)"
+                    strokeWidth="1"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: [0.1, 0.5, 0.1] }}
+                    transition={{
+                      duration: 4 + Math.random() * 3,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                  />
+                );
+              })}
+            </svg>
+
+            {/* ⚡ MATRIX RAIN (kept but toned to match original aesthetic) */}
+            {[...Array(35)].map((_, i) => (
               <motion.span
                 key={`rain-${i}`}
-                className="absolute text-green-400/40 text-xs font-mono"
+                className="absolute text-green-400/30 text-xs font-mono"
                 style={{
                   left: `${Math.random() * 100}%`,
                   top: "-10%",
@@ -355,7 +370,7 @@ export default function Home() {
                   opacity: [0, 1, 0],
                 }}
                 transition={{
-                  duration: 3 + Math.random() * 4,
+                  duration: 4 + Math.random() * 5,
                   repeat: Infinity,
                   delay: Math.random() * 3,
                   ease: "linear",
@@ -365,6 +380,7 @@ export default function Home() {
               </motion.span>
             ))}
           </div>
+
 
         </div>
 
