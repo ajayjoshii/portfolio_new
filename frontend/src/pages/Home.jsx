@@ -245,7 +245,7 @@ export default function Home() {
     <>
       <section className="relative min-h-screen overflow-hidden flex flex-col-reverse md:flex-row items-center justify-between px-6 sm:px-10 md:px-20 pt-28 sm:pt-20 lg:pt-28 gap-10 mb-0 bg-zinc-800">
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-          {[...Array(3)].map((_, i) => {
+          {/* {[...Array(3)].map((_, i) => {
             const radius = 20 + i * 100;
             const speed = 100 + i * 10;
             return (
@@ -294,7 +294,78 @@ export default function Home() {
             >
               {Math.random() > 0.5 ? "1" : "0"}
             </motion.span>
-          ))}
+          ))} */}
+          <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+
+            {/* 🌐 CIRCUIT SPHERES (3D FLOATING GLOBES) */}
+            {[...Array(3)].map((_, i) => {
+              const size = 180 + i * 120; // big spheres
+              const delay = i * 1.2; // stagger motion
+
+              return (
+                <motion.div
+                  key={`sphere-${i}`}
+                  className="absolute rounded-full border border-green-400/30"
+                  style={{
+                    width: `${size}px`,
+                    height: `${size}px`,
+                    left: `${20 + i * 30}%`,
+                    top: `${30 + i * 10}%`,
+                    transform: "translate(-50%, -50%)",
+                    background:
+                      "radial-gradient(circle at 30% 30%, rgba(34,197,94,0.15), transparent 60%)",
+                    boxShadow: "0 0 60px rgba(34,197,94,0.15)",
+                  }}
+                  animate={{
+                    x: [0, 40, -40, 0],
+                    y: [0, -30, 30, 0],
+                    rotateX: [0, 360],
+                    rotateY: [0, 360],
+                    scale: [1, 1.05, 1],
+                  }}
+                  transition={{
+                    duration: 12 + i * 2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay,
+                  }}
+                >
+                  {/* circuit grid lines */}
+                  <div className="absolute inset-0 rounded-full opacity-30"
+                    style={{
+                      backgroundImage:
+                        "repeating-radial-gradient(circle, rgba(34,197,94,0.3) 1px, transparent 2px)",
+                    }}
+                  />
+                </motion.div>
+              );
+            })}
+
+            {/* ⚡ MATRIX RAIN (0/1 FALLING) */}
+            {[...Array(40)].map((_, i) => (
+              <motion.span
+                key={`rain-${i}`}
+                className="absolute text-green-400/40 text-xs font-mono"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: "-10%",
+                }}
+                animate={{
+                  y: ["0vh", "120vh"],
+                  opacity: [0, 1, 0],
+                }}
+                transition={{
+                  duration: 3 + Math.random() * 4,
+                  repeat: Infinity,
+                  delay: Math.random() * 3,
+                  ease: "linear",
+                }}
+              >
+                {Math.random() > 0.5 ? "1" : "0"}
+              </motion.span>
+            ))}
+          </div>
+
         </div>
 
         <motion.div
@@ -377,8 +448,8 @@ export default function Home() {
 
           <motion.div
             initial={{ opacity: 0, y: 80 }}
-            whileInView={{ opacity: 1, y:0 }}
-            transition={{ duration: 1, delay:0.3 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
             animate={{ scale: [1, 1.02, 1] }}
             className="mt-8 sm:mt-10 flex flex-row mb-10 gap-4 justify-center md:justify-start">
             <a href="/cv.pdf" download>
