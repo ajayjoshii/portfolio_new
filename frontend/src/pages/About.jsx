@@ -12,7 +12,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="min-h-screen px-6 md:px-20 py-22 bg-zinc-900"
+      className="min-h-screen px-6 md:px-20 py-22 bg-[#070b14]"
     >
       {/* Section Header */}
       <motion.div
