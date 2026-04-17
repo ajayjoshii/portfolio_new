@@ -372,6 +372,13 @@ const tools = [
     route: "/projects/tools/charmy",
     icon: BotIcon
   },
+  {
+    title: "Charmy",
+    desc: "Smart AI assistant for automating tasks, generating insights, and improving productivity workflows",
+    tag: "GAMES",
+    route: "/projects/tools/charmy",
+    icon: BotIcon
+  },
 
 ];
 

@@ -438,6 +438,14 @@ export default function Skills() {
         "Deep packet inspection and network traffic analysis.",
       icon: FaShieldAlt,
     },
+     {
+      title: "Wireshark",
+      percent: 87,
+      tag: "GAMES",
+      description:
+        "Deep packet inspection and network traffic analysis.",
+      icon: FaShieldAlt,
+    },
   ];
 
   const [activeCategory, setActiveCategory] = useState("All");
