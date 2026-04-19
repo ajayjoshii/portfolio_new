@@ -222,8 +222,9 @@ export default function Home() {
         </motion.div>
 
         <img
+        src={home1}
           alt="Anish Parajuli"
-          className="relative z-10 w-[180px] h-[180px] sm:w-[250px] sm:h-[250px] md:w-[350px] md:h-[370px] rounded-full object-cover border-4 border-green-400"
+          className="relative z-10 w-[180px] h-[180px] sm:w-[250px] sm:h-[250px] md:w-88 md:h-89 object-cover rounded-full"
         />
       </section>
 

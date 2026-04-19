@@ -373,10 +373,10 @@ const tools = [
     icon: BotIcon
   },
   {
-    title: "Charmy",
-    desc: "Smart AI assistant for automating tasks, generating insights, and improving productivity workflows",
+    title: "Founder",
+    desc: "AI-powered business idea generator that creates innovative startup concepts based on user input and market trends",
     tag: "GAMES",
-    route: "/projects/tools/charmy",
+    route: "/projects/tools/founder",
     icon: BotIcon
   },
 

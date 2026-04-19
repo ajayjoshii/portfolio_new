@@ -438,13 +438,21 @@ export default function Skills() {
         "Deep packet inspection and network traffic analysis.",
       icon: FaShieldAlt,
     },
-     {
-      title: "Wireshark",
-      percent: 87,
+    {
+      title: "Unity",
+      percent: 100,
       tag: "GAMES",
       description:
-        "Deep packet inspection and network traffic analysis.",
-      icon: FaShieldAlt,
+        "Game development with C# scripting, 3D modeling, and interactive experiences.",
+      icon: FaLayerGroup,
+    },
+    {
+      title: "Unreal",
+      percent: 100,
+      tag: "GAMES",
+      description:
+        "Game development with C++ scripting, photorealistic rendering, and immersive environments.",
+      icon: FaLayerGroup,
     },
   ];
 
@@ -509,8 +517,8 @@ export default function Skills() {
               key={idx}
               onClick={() => setActiveCategory(cat)}
               className={`px-4 py-2 rounded-full font-medium transition ${activeCategory === cat
-                  ? "bg-green-500 text-black shadow-lg"
-                  : "bg-gray-800 text-gray-300 hover:bg-green-600/30"
+                ? "bg-green-500 text-black shadow-lg"
+                : "bg-gray-800 text-gray-300 hover:bg-green-600/30"
                 }`}
             >
               {cat}
