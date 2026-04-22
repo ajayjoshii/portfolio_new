@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import home1 from "../assets/profile.jpeg";
+import home1 from "../assets/profilenew.png";
 import About from "./About";
 import Skills from "./Skills";
 import Contact from "./Contact";
