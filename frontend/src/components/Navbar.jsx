@@ -7,10 +7,9 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-black/60 backdrop-blur border-b border-white/10 shadow-lg">
+    <nav className="fixed top-0 w-full z-50 bg-zinc-900/60 backdrop-blur border-b border-white/10 shadow-lg">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-2">
 
-        {/* Logo */}
         <NavLink
           to="/"
           onClick={() => setOpen(false)}
@@ -28,17 +27,73 @@ export default function Navbar() {
           </h1>
         </NavLink>
 
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center font-bold gap-15 text-xl relative right-15 text-zinc-300">
+        {/* <ul className="hidden md:flex items-center font-bold gap-15 text-xl relative right-15 text-zinc-500">
           <NavItem to="/" label="Home" />
           <NavItem to="/about" label="About" />
           <NavItem to="/skills" label="Skills" />
           <NavItem to="/projects" label="Projects" />
-          {/* <NavItem to="/experience" label="Experience" /> */}
           <NavItem to="/research" label="Research" />
           <NavItem to="/contact" label="Contact" />
 
-        </ul>
+          
+        </ul> */}
+        <ul className="hidden md:flex items-center gap-10 text-xl relative right-15 text-zinc-300 font-semibold">
+  
+  <li className="relative group transition-all duration-300">
+    <NavItem
+      to="/"
+      label="Home"
+      className="relative text-zinc-300 group-hover:text-white transition-colors duration-300 font-semibold group-hover:font-bold drop-shadow-sm [text-shadow:0_1px_2px_rgba(0,0,0,0.6)]"
+    />
+    <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+  </li>
+
+  <li className="relative group transition-all duration-300">
+    <NavItem
+      to="/about"
+      label="About"
+      className="relative text-zinc-300 group-hover:text-white transition-colors duration-300 font-semibold group-hover:font-bold drop-shadow-sm [text-shadow:0_1px_2px_rgba(0,0,0,0.6)]"
+    />
+    <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+  </li>
+
+  <li className="relative group transition-all duration-300">
+    <NavItem
+      to="/skills"
+      label="Skills"
+      className="relative text-zinc-300 group-hover:text-white transition-colors duration-300 font-semibold group-hover:font-bold drop-shadow-sm [text-shadow:0_1px_2px_rgba(0,0,0,0.6)]"
+    />
+    <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+  </li>
+
+  <li className="relative group transition-all duration-300">
+    <NavItem
+      to="/projects"
+      label="Projects"
+      className="relative text-zinc-300 group-hover:text-white transition-colors duration-300 font-semibold group-hover:font-bold drop-shadow-sm [text-shadow:0_1px_2px_rgba(0,0,0,0.6)]"
+    />
+    <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+  </li>
+
+  <li className="relative group transition-all duration-300">
+    <NavItem
+      to="/research"
+      label="Research"
+      className="relative text-zinc-300 group-hover:text-white transition-colors duration-300 font-semibold group-hover:font-bold drop-shadow-sm [text-shadow:0_1px_2px_rgba(0,0,0,0.6)]"
+    />
+    <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+  </li>
+
+  <li className="relative group transition-all duration-300">
+    <NavItem
+      to="/contact"
+      label="Contact"
+      className="relative text-zinc-300 group-hover:text-white transition-colors duration-300 font-semibold group-hover:font-bold drop-shadow-sm [text-shadow:0_1px_2px_rgba(0,0,0,0.6)]"
+    />
+    <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+  </li>
+
+</ul>
 
         
 
@@ -83,25 +138,45 @@ export default function Navbar() {
   );
 }
 
-/* Desktop Nav Item */
 function NavItem({ to, label }) {
   return (
+    // <NavLink
+    //   to={to}
+    //   className={({ isActive }) =>
+    //     `relative transition-all ease-in-out drop-shadow-[0_2px_4px_green] hover:text-primary
+    //      after:absolute after:left-0 after:-bottom-1 after:h-[2px]
+    //      after:bg-primary after:w-0 after:transition-all after:duration-300
+    //      hover:after:w-full hover:text-blue-400 duration-700
+    //      ${isActive ? "text-primary after:w-full font-semibold" : ""}`
+    //   }
+    // >
+    //   {label}
+    // </NavLink>
     <NavLink
-      to={to}
-      className={({ isActive }) =>
-        `relative transition-all ease-in-out drop-shadow-[0_2px_4px_green] hover:text-primary
-         after:absolute after:left-0 after:-bottom-1 after:h-[2px]
-         after:bg-primary after:w-0 after:transition-all after:duration-300
-         hover:after:w-full hover:text-blue-400 duration-700
-         ${isActive ? "text-primary after:w-full font-semibold" : ""}`
-      }
-    >
-      {label}
-    </NavLink>
+  to={to}
+  className={({ isActive }) =>
+    `relative inline-block transition-all duration-500 ease-out
+      font-medium
+     hover:text-green-500 hover:font-semibold
+     [text-shadow:0_2px_6px_rgba(0,0,0,0.6)]
+     hover:[text-shadow:0_2px_10px_rgba(255,255,255,0.3)]
+     
+     after:content-[''] after:absolute after:left-0 after:-bottom-1
+     after:h-[2px] after:bg-green-500 text-green-500 after:w-0
+     after:transition-all after:duration-300 after:ease-out
+     hover:after:w-full
+     
+     ${isActive
+       ? "text-green-500 font-bold after:w-full [text-shadow:0_2px_12px_rgba(255,255,255,0.4)]"
+       : ""
+     }`
+  }
+>
+  {label}
+</NavLink>
   );
 }
 
-/* Mobile Nav Item */
 function MobileNavItem({ to, label, setOpen }) {
   return (
     <NavLink
