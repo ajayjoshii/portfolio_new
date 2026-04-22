@@ -104,6 +104,9 @@ export default function About() {
             </p>
           </div>
         </motion.div>
+
+        
+
         <motion.div
           initial={{ opacity: 0, x: 60 }}
           whileInView={{ opacity: 1, x: 0 }}
