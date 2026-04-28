@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import home1 from "../assets/profilenew.png";
+import home1 from "../assets/profile.jpeg";
 import About from "./About";
 import Skills from "./Skills";
 import Contact from "./Contact";
@@ -373,7 +373,7 @@ export default function Home() {
         <img
           src={home1}
           alt="Anish Parajuli"
-          className="relative z-10 w-[180px] h-[180px] sm:w-[250px] sm:h-[250px] md:w-88 md:h-89 object-cover rounded-full"
+          className="relative z-10 w-[180px] h-[180px] sm:w-[250px] sm:h-[250px] md:w-95 md:h-100 rounded-full"
         />
       </section>
 

@@ -37,6 +37,7 @@ import Charmy from './tools/Charmy'
 import NetSlayer from './tools/NetSlayer'
 import DemonKiller from './tools/DemonKiller'
 import NoobSlayer from './tools/NoobSlayer'
+import Founder from './tools/Founder'
 export default function App() {
   return (
     <>
@@ -83,6 +84,9 @@ export default function App() {
         <Route path="/projects/tools/net-slayer" element={<NetSlayer />} />
         <Route path="/projects/tools/demon-killer" element={<DemonKiller />} />
         <Route path="/projects/tools/noob-slayer" element={<NoobSlayer />} />
+
+
+        <Route path="/projects/tools/founder" element={<Founder  />} />
 
        
 
