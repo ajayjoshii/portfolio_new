@@ -5,119 +5,135 @@ const Founder = () => {
     <div className="min-h-screen bg-[#070b14] text-white flex justify-center items-center p-6">
       <div className="mt-22 w-full bg-[#0b1120] border border-green-400/30 rounded-xl p-8 shadow-lg hover:shadow-[0_0_25px_rgba(34,197,94,0.6)] transition animate-[float_6s_ease-in-out_infinite]">
 
-        <h2 className="text-3xl font-bold text-green-400 mb-4 animate-bounce">
-          Meet the Founder Behind the Gaming Vision
+        <h2 className="text-3xl font-bold text-green-400 mb-4">
+          Founder – The Beginning of Journey
         </h2>
 
         <p className="text-gray-300 mb-6">
-          Every great game begins with a vision. Behind this project is a passionate founder dedicated to creating immersive and engaging gaming experiences. The goal is not just to build games, but to craft worlds that players can explore, compete in, and enjoy.
+          There’s a certain kind of game that doesn’t just drop you into action. 
+          It pulls you into a world that feels personal. Founder – The Beginning of Journey 
+          is built around that idea. It’s not just about fighting enemies or unlocking powers. 
+          It’s about a boy trying to make sense of something terrible, and what he becomes because of it.
+        </p>
+
+        <h3 className="text-xl font-semibold text-green-300 mb-3">
+          A Story That Starts with Tragedy
+        </h3>
+
+        <p className="text-gray-300 mb-4">
+          The game begins with a quiet life. A normal school boy, living an ordinary day. 
+          That changes in an instant.
         </p>
 
         <p className="text-gray-300 mb-6">
-          Instead of focusing only on entertainment, this journey also emphasizes creativity, problem-solving, and innovation in game development.
+          A boksi a figure rooted in old Nepali folklore, feared for black magic and necromancy 
+          destroys his entire family. Not just kills them, but leaves behind something darker. 
+          Something unnatural. The boy survives. And that survival becomes his purpose. 
+          He doesn’t fully understand what happened, or why. But he knows one thing clearly: 
+          he will find the boksi and end her.
         </p>
 
-        <h3 className="text-xl font-semibold mb-3 text-green-300">
-          Who Is the Founder?
+        <h3 className="text-xl font-semibold text-green-300 mb-3">
+          A Journey Across a Living World
         </h3>
 
         <p className="text-gray-300 mb-4">
-          The founder is a developer and creative thinker who combines technical skills with a deep love for gaming. With experience in modern web technologies and interactive design, the focus is on building games that are both fun and technically impressive.
-        </p>
-
-        <p className="text-gray-300 mb-4">
-          From concept to execution, every part of the development process is handled with attention to detail.
-        </p>
-
-        <h3 className="text-xl font-semibold mb-3 text-green-300">
-          Vision for Game Development
-        </h3>
-
-        <p className="text-gray-300 mb-4">
-          The main vision is to create games that are:
+          The game is structured around exploration. You begin with a single map, slowly opening 
+          new regions as the story unfolds. Each new area brings stronger enemies, deeper lore, 
+          and new powers.
         </p>
 
         <ul className="list-disc list-inside text-gray-400 space-y-2 mb-6">
-          <li>Engaging and interactive</li>
-          <li>Accessible across platforms</li>
-          <li>Visually appealing</li>
-          <li>Performance optimized</li>
-        </ul>
-
-        <p className="text-gray-300 mb-4">
-          The aim is to blend creativity with technology to deliver unique gaming experiences.
-        </p>
-
-        <h3 className="text-xl font-semibold mb-3 text-green-300">
-          Key Areas of Focus
-        </h3>
-
-        <ul className="list-disc list-inside text-gray-400 space-y-2 mb-6">
-          <li>Frontend game interfaces using React</li>
-          <li>Game logic and state management</li>
-          <li>Animations and smooth transitions</li>
-          <li>User experience and responsive design</li>
-        </ul>
-
-        <h3 className="text-xl font-semibold mb-3 text-green-300">
-          Development Approach
-        </h3>
-
-        <p className="text-gray-300 mb-4">
-          The development process follows a structured workflow:
-        </p>
-
-        <ol className="list-decimal list-inside text-gray-400 space-y-2 mb-6">
-          <li>Design and planning of game concepts</li>
-          <li>Building core mechanics and features</li>
-          <li>Testing gameplay and performance</li>
-          <li>Improving based on feedback</li>
-        </ol>
-
-        <p className="text-gray-300 mb-6">
-          This approach ensures that each game is polished and enjoyable for users.
-        </p>
-
-        <h3 className="text-xl font-semibold mb-3 text-green-300">
-          Challenges Faced
-        </h3>
-
-        <ul className="list-disc list-inside text-gray-400 space-y-2 mb-6">
-          <li>Balancing performance with visual effects</li>
-          <li>Creating smooth animations</li>
-          <li>Managing complex game states</li>
-          <li>Ensuring cross-device compatibility</li>
+          <li>One major mission that drives the story forward</li>
+          <li>Four smaller side missions to explore the world</li>
+          <li>Eight daily missions that keep the world active and rewarding</li>
         </ul>
 
         <p className="text-gray-300 mb-6">
-          Overcoming these challenges has helped refine both technical and creative skills.
+          This creates a steady rhythm. You always have something meaningful to do without losing 
+          sight of the main goal.
         </p>
 
-        <h3 className="text-xl font-semibold mb-3 text-green-300">
-          Future Goals
+        <h3 className="text-xl font-semibold text-green-300 mb-3">
+          Combat Rooted in Tradition
+        </h3>
+
+        <p className="text-gray-300 mb-6">
+          One of the key choices in Founder is what it doesn’t include. There are no modern guns. 
+          No robots. No futuristic tech. Combat is grounded in tradition and skill. Weapons are 
+          inspired by real culture, especially Nepali heritage. The standout is the khukuri, 
+          a curved blade known for its power and symbolism. Alongside it, you’ll find weapons 
+          like katanas, each offering a different fighting style. The focus is on close combat, 
+          timing, and mastery. Every fight feels personal.
+        </p>
+
+        <h3 className="text-xl font-semibold text-green-300 mb-3">
+          Elemental Power System
+        </h3>
+
+        <p className="text-gray-300 mb-6">
+          The boy isn’t just a fighter. He’s changing. As the journey continues, he begins to 
+          unlock elemental powers. These aren’t given all at once. They are earned, tied to 
+          progression and discovery. The first element is fire. Fire represents anger, pain, 
+          and raw energy. It fits where the character is emotionally at the start. As new maps 
+          unlock, so do new elements. Each one adds new abilities, new strategies, and new ways 
+          to interact with enemies. This creates a sense of growth that mirrors the character’s 
+          inner transformation.
+        </p>
+
+        <h3 className="text-xl font-semibold text-green-300 mb-3">
+          A Companion on the Path
+        </h3>
+
+        <p className="text-gray-300 mb-6">
+          He’s not completely alone. Early in the journey, he meets a companion. This character 
+          doesn’t just help in combat. They guide him, explain the world, and slowly reveal the 
+          truth behind the boksi and the forces at work. The relationship adds depth. It gives 
+          the player moments to breathe between battles and reminds you that this is more than 
+          just revenge.
+        </p>
+
+        <h3 className="text-xl font-semibold text-green-300 mb-3">
+          Enemies That Shape the World
         </h3>
 
         <ul className="list-disc list-inside text-gray-400 space-y-2 mb-6">
-          <li>Develop more advanced and interactive games</li>
-          <li>Introduce multiplayer features</li>
-          <li>Enhance graphics and animations</li>
-          <li>Expand to mobile and web platforms</li>
+          <li>Village boksi – smaller but powerful witches who control local areas.</li>
+          <li>Elemental bosses – enemies tied to specific powers.</li>
+          <li>Bandits and robbers – grounded human threats.</li>
+          <li>Wild animals – snakes, tigers, lions with elemental abilities.</li>
         </ul>
 
         <p className="text-gray-300 mb-6">
-          The long-term goal is to build a strong portfolio of innovative games.
+          And above all of them…
         </p>
 
-        <h3 className="text-xl font-semibold mb-2 text-green-300">
-          Final Thoughts
+        <h3 className="text-2xl font-bold text-green-400 mb-3">
+          The Queen Boksi
+        </h3>
+
+        <p className="text-gray-300 mb-6">
+          The main antagonist isn’t just another enemy. She’s the center of everything. 
+          The Queen Boksi is powerful, mysterious, and deeply connected to the world’s 
+          darker forces. She doesn’t just wait at the end. Her presence is felt throughout 
+          the journey. Every village you free, every boss you defeat, brings you closer 
+          to her. And every step raises the question: when the boy finally meets her, 
+          will he still be the same person who started this journey?
+        </p>
+
+        <h3 className="text-xl font-semibold text-green-300 mb-3">
+          More Than …
         </h3>
 
         <p className="text-gray-400 mb-4">
-          Game development is more than just coding—it’s about creating experiences that people enjoy and remember. With passion and continuous learning, the possibilities are endless.
+          Founder – The Beginning of Journey is about growth through struggle. It mixes 
+          adventure, supernatural elements, and cultural inspiration into a world that 
+          feels both grounded and mystical.
         </p>
 
         <p className="text-gray-400">
-          This journey reflects a commitment to innovation, creativity, and delivering high-quality gaming experiences to users around the world.
+          It’s about a boy who lost everything, and what he becomes when he gains power. 
+          And this is just the beginning.
         </p>
 
       </div>
